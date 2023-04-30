@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta property="og:title" content="My website title" />
     <meta property="og:description" content="Summary of the contents of the page you are viewing" />
-    <meta property="og:image" content="{{ url_for('static', filename='ogimage.png') }}" />
+    <meta property="og:image" content="https://cdn.glitch.global/df0a004d-4394-4790-8973-430fa7b6b8b3/nicolas-jehly-LonlxBtH1c4-unsplash.jpg?v=1682869542434" />
 
 
     <!-- Bootstrap CSS -->
@@ -38,6 +38,9 @@
                         let title = articles[i]['title'];
                         let content = articles[i]['content'];
                         let file = articles[i]['file'];
+
+                        let time = articles[i]['time'] || '????.??.??';
+
                         let profile = articles[i]['profile'];
                         let temp_html = `
             <div class="col-4">
@@ -47,7 +50,7 @@
                          <img src="../${profile}" class="card-img-top" alt="..." />
                         <h5 class="card-title">${title}</h5>
                         <p class="card-text">${content}</p>
-                        <h6 class="card-subtitle mb-2 text-muted">2022.02.15</h6>
+                        <h6 class="card-subtitle mb-2 text-muted">${time}</h6>
                     </div>
                 </div>
             </div>
